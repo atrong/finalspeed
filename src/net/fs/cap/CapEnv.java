@@ -467,7 +467,7 @@ public class CapEnv {
 	}
 	
 	private void detectMac_tcp() throws UnknownHostException{
-		InetAddress address=InetAddress.getByName("www.bing.com");
+		InetAddress address=InetAddress.getByName("www.baidu.com");
 		final int por=80;
 		testIp_tcp=address.getHostAddress();
 		for(int i=0;i<5;i++){
