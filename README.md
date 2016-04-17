@@ -4,6 +4,9 @@ FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服
 ## 修改说明
 去掉了GUI,启动后不再有图标,托盘,任何信息将只在Terminal里显示.
 
+## 下载
+[Releases](https://github.com/kokutoukiritsugu/finalspeed/releases)
+
 ## 使用帮助
 ```
 需要管理员权限
