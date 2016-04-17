@@ -1,6 +1,9 @@
 # FinalSpeed
 FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服务,在高丢包和高延迟环境下,仍可达到90%的物理带宽利用率,即使高峰时段也能轻松跑满带宽.
 
+# 原GITHUB地址
+[FinalSpeed](https://github.com/kokutoukiritsugu/finalspeed)
+
 ## 修改说明
 去掉了GUI,启动后不再有图标,托盘,任何信息将只在Terminal里显示.
 
