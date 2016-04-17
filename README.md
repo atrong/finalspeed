@@ -1,19 +1,17 @@
 # FinalSpeed
 FinalSpeed是高速双边加速软件,可加速所有基于tcp协议的网络服务,在高丢包和高延迟环境下,仍可达到90%的物理带宽利用率,即使高峰时段也能轻松跑满带宽.
 
-### 安装教程
-[客户端安装说明](http://www.d1sm.net/thread-7-1-1.html)
-<br />
-[服务端安装说明](http://www.d1sm.net/thread-8-1-1.html)
+## 修改说明
+去掉了GUI,启动后不再有图标,托盘,任何信息将只在Terminal里显示.
 
-### 使用帮助
+## 使用帮助
 ```
 需要管理员权限
-java -jar finalspeed.jar -b 运行CLI版
-java -jar finalspeed.jar 运行GUI版
+sudo java -jar finalspeed.jar
 ```
 
 CLI版本需要手动配置, 且配置文件与finalspeed必须处在同一目录下.
+建议直接用gui版本配置好之后,拷贝两个.json文件.
 clien_config.json
 ```
 {
@@ -51,5 +49,3 @@ port_map.json
     ]
 }
 ```
-
-论坛 http://www.d1sm.net/forum-44-1.html
