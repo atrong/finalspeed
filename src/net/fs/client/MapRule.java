@@ -26,24 +26,4 @@ public class MapRule implements Serializable{
 		return listen_port;
 	}
 
-	public void setListen_port(int listen_port) {
-		this.listen_port = listen_port;
-	}
-
-	public int getDst_port() {
-		return dst_port;
-	}
-
-	public void setDst_port(int dst_port) {
-		this.dst_port = dst_port;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
 }

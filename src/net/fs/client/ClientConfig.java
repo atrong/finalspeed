@@ -113,5 +113,5 @@ public class ClientConfig {
 	public void setRecentAddressList(ArrayList<String> recentAddressList) {
 		this.recentAddressList = recentAddressList;
 	}
-	
+
 }
