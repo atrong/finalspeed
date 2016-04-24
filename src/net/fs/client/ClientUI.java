@@ -332,7 +332,9 @@ public class ClientUI implements ClientUII {
         String string =
                 " 下载:" + Tools.getSizeStringKB(downloadSpeed) + "/s"
                         + " 上传:" + Tools.getSizeStringKB(uploadSpeed) + "/s";
-        MLog.println(string);
+        if (!Tools.getSizeStringKB(downloadSpeed).equals("0") & !Tools.getSizeStringKB(uploadSpeed).equals("0") ) {
+            MLog.println(string);
+        }
     }
 
     boolean haveNewVersion() {
