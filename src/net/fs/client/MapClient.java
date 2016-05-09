@@ -9,11 +9,15 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.util.HashSet;
+import java.util.Random;
 
 public class MapClient implements Trafficlistener {
 
     static MapClient mapClient;
     static int monPort = 25874;
+    public String mapdstAddress;
+    public int mapdstPort;
+    ConnectionProcessor imTunnelProcessor;
     Route route_udp, route_tcp;
     short routePort = 45;
     ClientUII ui;
@@ -32,6 +36,12 @@ public class MapClient implements Trafficlistener {
     String systemName = System.getProperty("os.name").toLowerCase();
 
     boolean useTcp = true;
+
+    long clientId;
+
+    Random ran = new Random();
+
+    boolean tcpEnable;
 
     MapClient(ClientUI ui, boolean tcpEnvSuccess) throws Exception {
         this.ui = ui;
@@ -381,6 +391,20 @@ public class MapClient implements Trafficlistener {
         }
     }
 
+    synchronized public void closeAndTryConnect_Login(boolean testSpeed) {
+        close();
+        boolean loginOK = ui.login();
+        if (loginOK) {
+            ui.updateNode(testSpeed);
+            //testPool();
+        }
+    }
+
+    synchronized public void closeAndTryConnect() {
+        close();
+        //testPool();
+    }
+
     public void close() {
         //closeAllProxyRequest();
         //poolManage.close();
@@ -403,6 +427,14 @@ public class MapClient implements Trafficlistener {
 
     public boolean isUseTcp() {
         return useTcp;
+    }
+
+    public void setUseTcp(boolean useTcp) {
+        this.useTcp = useTcp;
+    }
+
+    public ClientUII getUi() {
+        return ui;
     }
 
     public void setUi(ClientUII ui) {
